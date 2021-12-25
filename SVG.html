@@ -1,108 +1,87 @@
-<!DOCTYPE html> <html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
+    <title>SVG</title>
+    </head>
 
-<meta charset="utf-8">
+<BODY>
+<FIELDSET>
+    <LEGEND>Animate transform</LEGEND>
+<svg width="120" height="120" viewBox="0 0 120 120"
+     xmlns="http://www.w3.org/2000/svg">
 
-<title>Create a Line with HTML5 SVG</title>
+    <polygon points="60,30 90,90 30,90">
+        <animateTransform attributeName="transform"
+                          attributeType="XML"
+                          type="rotate"
+                          from="0 60 70"
+                          to="360 60 70"
+                          dur="10s"
+                          repeatCount="indefinite"/>
+    </polygon>
+</svg>
+</FIELDSET>
 
-<style> svg {border: 1px solid black;} </style>
 
-</head> <body>
+<fieldset>
+    <legend>Rectangles</legend>
+    <svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Simple rectangle -->
+        <rect width="100" height="100" />
+      
+        <!-- Rounded corner rectangle -->
+        <rect x="120" width="100" height="100" rx="15" />
+      </svg>
+      
+</fieldset>
 
-<table cellspacing = "10px" cellpadding= "10px">
+<fieldset>
+    <legend>Marker</legend>
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- arrowhead marker definition -->
+          <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+              markerWidth="6" markerHeight="6"
+              orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" />
+          </marker>
+      
+          <!-- simple dot marker definition -->
+          <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5"
+              markerWidth="5" markerHeight="5">
+            <circle cx="5" cy="5" r="5" fill="red" />
+          </marker>
+        </defs>
+      
+        <!-- Coordinate axes with a arrowhead in both direction -->
+        <polyline points="10,10 10,90 90,90" fill="none" stroke="black"
+         marker-start="url(#arrow)" marker-end="url(#arrow)"  />
+      
+        <!-- Data line with polymarkers -->
+        <polyline points="15,80 29,50 43,60 57,30 71,40 85,15" fill="none" stroke="grey"
+         marker-start="url(#dot)" marker-mid="url(#dot)"  marker-end="url(#dot)" />
+      </svg>
+      
+</fieldset>
 
-<tr><td> <h3> SVG Line </h3>
 
-<svg width="100" height="120">
+    <h2>Radial gradient</h2> 
+        <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <radialGradient id="myGradient">
+      <stop offset="10%" stop-color="gold" />
+      <stop offset="95%" stop-color="red" />
+    </radialGradient>
+  </defs>
 
-<line x1="20" y1="30" x2="80" y2="100"
+  <!-- using my radial gradient -->
+  <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
+</svg>
 
-stroke="red" stroke-width="4"/>
 
-</svg> </td><tr>
 
-<tr><td> <h3> SVG Rectangle </h3>
-
-<svg height="140" width="160">
-
-<rect x = "20" y ="10" rx = "20" ry ="20" width="120" height="120" style="fill:red; stroke:purple; stroke-width:5;" />
-
-</svg> </td></tr>
-
-<tr><td> <h3> SVG Rounded Rectangle </h3>
-
-<svg width="160" height="130">
-
-<rect x="10" y="20" rx="20" ry="20" width="140" height="100"
-
-style="fill: yellow; stroke:purple; stroke-width:5; opacity: 0.5" />
-
-</svg> </td> </tr>
-
-<tr><td> <h3> SVG Circle </h3>
-
-<svg width="100" height="98">
-
-<circle cx="50" cy="50" r="35"
-
-stroke-width="4" fill="blue" />
-
-</svg></td><tr>
-
-<tr><td> <h3> SVG Polygon </h3> <svg height="160" width="160">
-
-<polygon points="80, 10 20,148 150,60 10,60, 120,148" style="fill:yellow; stroke:blue; stroke-width:5;
-
-</svg> </td></tr>
-
-fill-rule:nonzero;" />
-
-<tr> <td> <h3> SVG Logo Using Eclipse </h3>
-
-<svg height="130" width="200">
-
-<ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-
-<text fill="#ffffff" font-size="45"
-
-font-family="Verdana" x="50" y="86">SVG</text>
-
-<defs> <linearGradient id="gradi"
-
-x1="0%" y1="0%" x2="100%" y2="0%"> <stop offset="0%" style="stop-color: rgb(255,255,0);
-
-stop-opacity: 1" />
-
-<stop offset="100%" style="stop-color:rgb(255,0,0);
-
-stop-opacity:1" />
-
-</linearGradient> </defs> Sorry, your browser does not support inline SVG.
-
-s/svg> </td> </tr>
-</table> </body>
-
+</BODY>
 </html>
 
-<!DOCTYPE html> <html>
-
-<body>
-
-<svg height="200" width="500"> <polyline
-
-points="20,80 40,85 60,100 70,130 120,180 160, 190" style="fill:none; stroke:black; stroke-width:3" />
-
-<polyline:
-
-points="100,40 140,40 140,80 180,80 180,120 220,120 220,160" style="fill: white; stroke:red; stroke-width:4" /> Sorry, your browser does not support inline SVG.
-
-</svg>
-
-<svg height="150" width="500">
-
-<ellipse cx="180" cy="100" rx="120" ry="30" style="fill:purple"/> <ellipse cx="170" cy="70" x="90" ry="20" style="fill:lime"/> <ellipse cx="175" cy="45" rx="70" ry="15" style="fill:blue"/>
-
-</svg>
-
-</body> </html>

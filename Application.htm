@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css">
+    <title>Job Application Page</title>
+</head>
+
+<body>
+    <div>
+        <p>Background Color</p>
+        <button type="button" onclick="myForm()">Green</button>
+        <button type="button" onclick="myForm1()">Black</button>
+        <button type="button" onclick="myForm0()">Original</button><br>
+
+        <p>Font Color</p>
+        <button type="button" onclick="myForm5()">Green</button>
+        <button type="button" onclick="myForm6()">Orange</button>
+        <button type="button" onclick="myForm7()">White</button>
+        <button type="button" onclick="myForm8()">Original</button><br>
+
+        <p>Font Size</p>
+        <button type="button" onclick="myForm2()">Enlarge</button>
+        <button type="button" onclick="myForm3()">Minimize</button>
+        <button type="button" onclick="myForm4()">Original</button><br>
+
+        <p>Font Family</p>
+        <button type="button" onclick="myForm9()">Monospace</button>
+        <button type="button" onclick="myForm10()">Verdana</button>
+        <button type="button" onclick="myForm11()">Arial</button>
+        <button type="button" onclick="myForm12()">Original</button>
+
+    </div>
+
+    <form action="" method="get" id="form">
+        <fieldset>
+            <legend style="text-align: center">
+                <h1>Job Application Form</h1>
+            </legend>
+            <label for="position">Position appiled for:</label><br />
+            <input type="text" name="position" size="50%" style="padding: 10px" autofocus required /><br /><br />
+            <label for="name">Name:</label><br />
+            <input type="text" name="name" id="name" maxlength="50" required /><br /><br />
+            <label for="email">Email:</label><br />
+            <input type="email" name="email" id="email" required /><br /><br />
+            <label for="tel">Phone:</label><br />
+            <input type="tel" name="tel" id="tel" required /><br /><br />
+            <label for="name">Nationality:</label><br />
+            <input type="text" name="nation" value="" placeholder="Type here" size="50%" style="padding: 10px" required /><br /><br />
+            <label for="dob">Date of birth:</label><br />
+            <input type="date" name="dob" id="dob" /><br /><br />
+            <label for="address">Address:</label><br />
+            <textarea rows="8" cols="40" id="address"></textarea><br /><br />
+            <label for="history">Educational History and Qualifications:</label
+        ><br />
+        <textarea rows="8" cols="40"></textarea><br /><br />
+        <label for="experience">Experience/Training(in number):</label><br />
+            <input type="number" name="experience" id="experience" min="0" max="10" /><br /><br />
+            <label for="statement">Personal Statement:</label><br />
+            <textarea rows="8" cols="40" id="statement"></textarea><br /><br />
+        </fieldset>
+        <fieldset>
+            <legend style="text-align: center">
+                <h2>Referee Form</h2>
+            </legend>
+            <fieldset>
+                <legend style="text-align: center">
+                    Referee Form(to be completed by the applicant)
+                </legend>
+                <label for="applecant">Name:</label><br />
+                <input type="text" name="applicant" id="applicant" maxlength="50" required /><br /><br />
+                <label for="job">Occupation:</label><br />
+                <input type="text" name="jab" id="job" required /><br /><br />
+                <label for="rel">Relationship:</label><br />
+                <input type="text" name="rel" id="rel" /><br /><br />
+                <label for="addr">Address:</label><br />
+                <textarea rows="8" cols="40" id="addr"></textarea><br /><br />
+                <label for="phine">Phone:</label><br />
+                <input type="tel" name="phone" id="phone" required /><br /><br />
+            </fieldset>
+            <br /><br />
+            <fieldset>
+                <legend style="text-align: center">
+                    Referee Form(to be completed by the referee)
+                </legend>
+                <label for="applecant">Name:</label><br />
+                <input type="text" name="applicant" id="app" maxlength="50" required /><br /><br />
+                <label for="job">Occupation:</label><br />
+                <input type="text" name="jab" id="occ" required /><br /><br />
+                <label for="rel">Relationship:</label><br />
+                <input type="text" name="rel" id="relation" /><br /><br />
+                <label for="addr">Address:</label><br />
+                <textarea rows="8" cols="40" id="add"></textarea><br /><br />
+                <label for="phine">Phone:</label><br />
+                <input type="tel" name="phone" id="telephone" required /><br /><br />
+            </fieldset>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <button type="submit" onclick="S()" onmouseenter="Alert()">Submit</button>
+            <button type="reset" onclick="Clear()">Clear</button>
+        </fieldset>
+    </form>
+    <script src="form.js">
+    </script>
+</body>
+
+</html>

@@ -6,6 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback Form</title>
+     <script>
+       function myFunc(){
+         var x=document.getElementById("name");
+         x.value=x.value.toUpperCase();
+         
+       }
+       function mOver(obj){
+         obj.innerHTML="Thank You for your comment"
+       }
+       function mOut(obj){
+         obj.innerHTML="Mouse Over Me"
+       }
+       function myFunction(x) {
+        x.style.background = "yellow";
+       }
+     </script>
+
 </head>
 
 <body>
@@ -31,10 +48,10 @@
                 <br />
                 <form>
                     <label for="name">Name: </label><br />
-                    <input type="text" name="text" id="name" /><br />
+                    <input type="text" name="text" id="name" onchange="myFunc()" onfocus="myFunction(this)"/><br />
 
                     <label for="email">Email: </label><br />
-                    <input type="email" name="email" id="email" required placeholder="Email" min="6" max="32" />
+                    <input type="email" name="email" id="email" required placeholder="Email" min="6" max="32" onfocus="myFunction(this)"/>
 
                     <p>Please check all the emotions that apply to you</p>
 
@@ -44,7 +61,7 @@
                             <label for="emotions">Angry</label>
                         </li>
                         <li>
-                            <input type="checkbox" id="emotions" /><label for="emotions">Sad</label
+                            <input type="checkbox" id="emotions" /><label for="emotions" >Sad</label
                 >
               </li>
               <li>
@@ -96,6 +113,10 @@
             </td>
         </tr>
     </table>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#f2346769;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+
     <table align="center">
         <tr>
             <td align="right" width="300px">
@@ -111,6 +132,7 @@
             </td>
         </tr>
     </table>
+    
 </body>
 
 </html>
